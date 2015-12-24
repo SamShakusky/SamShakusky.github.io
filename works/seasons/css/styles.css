@@ -1,0 +1,69 @@
+/* CSS Document */
+
+								/*CSS RESET*/
+								
+html { 
+	box-sizing: border-box;
+	height: 100%;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body, figure {
+	margin: 0;
+}
+
+								/*FONTS*/
+
+/* font-family: "RobotoSlabRegular"; */
+@font-face {
+    font-family: "RobotoSlabRegular";
+    src: url("../fonts/RobotoSlabRegular/RobotoSlabRegular.eot");
+    src: url("../fonts/RobotoSlabRegular/RobotoSlabRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/RobotoSlabRegular/RobotoSlabRegular.woff") format("woff"),
+    url("../fonts/RobotoSlabRegular/RobotoSlabRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* font-family: "RobotoSlabLight"; */
+@font-face {
+    font-family: "RobotoSlabLight";
+    src: url("../fonts/RobotoSlabLight/RobotoSlabLight.eot");
+    src: url("../fonts/RobotoSlabLight/RobotoSlabLight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/RobotoSlabLight/RobotoSlabLight.woff") format("woff"),
+    url("../fonts/RobotoSlabLight/RobotoSlabLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+								/*MAIN*/
+								
+body {
+	background-size: cover;
+	background-position: bottom;
+}
+
+h1 {
+	width: 100%;
+	height: 40px;	
+	text-align: center;
+	position: absolute;
+	bottom: 1%;
+	font-family: "RobotoSlabRegular";
+	font-size: 50px;
+	color: #000000;
+	text-shadow: #fff 1px 0px, #fff 1px 1px, #fff 0px 1px, #fff -1px 1px, #fff -1px 0px, #fff -1px -1px, #fff 0px -1px, #fff 1px -1px;
+}
+
+p {
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	font-family: "RobotoSlabLight";
+	color: white;
+	text-shadow: #000 -1px 0px, #000 -1px -1px, #000 0px -1px;
+}
+	p:hover {
+		border-bottom: 1px dashed white;	
+	}

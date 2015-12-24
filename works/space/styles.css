@@ -1,3 +1,4 @@
+												/*STYLES RESET*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,11 +19,14 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+												/*MAIN*/
+
 body {
 	line-height: 1;
 }
@@ -84,7 +88,7 @@ body {
 .navigation_bar li {
 	display: inline;
 	padding: 4px 45px;
-	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
 	font-size: 20px;
 	position: relative;
 	top: -4px;
@@ -100,7 +104,7 @@ body {
 	position: relative;
 	z-index: 1;
 	font-size: 30px;
-	left: 1px;
+	left: -4px;
 	top: 17px;
 }
 
@@ -108,19 +112,13 @@ body {
 	position: relative;
 	z-index: 1;
 	font-size: 30px;
-	left: 1px;
+	left: -4px;
 	top: 17px;
 }
 
 li a:hover {
 	color: #ff9900;
 }
-
-/*.li_active {
-	background: url(img/arrow.png) no-repeat;
-	background-position: bottom;
-	background-size: 8px;
-}*/
 
 a {
 	color: white;

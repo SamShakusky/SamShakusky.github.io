@@ -1,0 +1,185 @@
+@charset "utf-8";
+							/*CSS RESET*/
+html { 
+	box-sizing: border-box;
+	height: 100%;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body, figure {
+	margin: 0;
+}
+
+							/*MAIN*/
+
+body {
+	height: 100%;
+	overflow: hidden;
+	background: url(../img/dots.jpg);
+	background-size: 200px;
+}
+
+header {
+	margin: auto;
+	width: 95%;
+	text-align: right;
+}
+	header h1 {
+		text-align: center;
+		font-family: 'Orbitron', sans-serif;
+		font-size: 3em;
+		color: #f7f9f5;
+		text-shadow: 0 0 80px #ffffff,0 0 15px #008000,0 0 6px #0000ff;
+		margin-bottom: -1%;
+		cursor: default;
+	}
+
+	header span {
+		animation: flick linear 9s infinite;	
+	}
+
+	
+
+	@keyframes flick {
+		0%,12%,18.999%,23%,37.999%,43%,54.999%,56%,64.999%,66%,68.999%,71%,83.999%,86%, 98.999%,100% {
+		opacity:0.99; text-shadow: 0 0 80px #ffffff,0 0 15px #008000,0 0 6px #0000ff;
+	  }
+	  19%,22.99%,38%,42.999%,55%,55.999%,65%,65.99%,69%,70.999%,84%,85.999%, 99%,99.999% { 
+		opacity:0.4; text-shadow: none;
+	  }
+
+	}
+
+	header p:nth-child(3) {
+		color: #f7f9f5;
+		text-shadow: 0 0 10px #ffffff,0 0 5px #008000,0 0 2px #0000ff;
+	}
+
+	header p {
+		font-family: 'Squada one', sans-serif;
+		font-size: 1.3em;
+		display: inline-block;
+		color: #2a2529;
+		cursor: default;
+		
+	}
+
+	header h3 {
+		font-family: 'Squada one', sans-serif;
+		font-size: 1.3em;
+		color: #2a2529;
+		cursor: default;
+		width: 117%;
+		text-align: center;
+		float: left;
+		color: #f7f9f5;
+		text-shadow: 0 0 8px #ffffff,0 0 4px #008000,0 0 2px #0000ff;
+	}
+		.am-pm-active {
+			color: #f7f9f5;
+			text-shadow: 0 0 10px #ffffff,0 0 5px #008000,0 0 2px #0000ff;
+		}
+
+header h4 {
+	color: #2a2529;
+	font-family: 'Orbiton', sans-serif;
+	display: inline;
+	position: absolute;
+	top: -0.2em; left: 0.4em;
+	transition: 0.2s;
+	cursor: default;
+}
+
+	header h4:nth-child(3) {
+		left: 4.8em;
+	}
+
+.switch {
+	position: absolute;
+	top: 1.2em; left: 3em;
+	width: 1em; height: 1.1em;
+	background-color: #2b2b2b;
+	cursor: pointer;
+}
+
+.circle {
+	width: 0.66em; height: 0.66em;
+	background-color: #2b2b2b;
+	border-radius: 50%;
+	position: absolute;
+	display: inline-block;
+}
+
+.circle:nth-child(1) {
+	left: -0.3em;
+}
+
+.circle:nth-child(2) {
+	right: -0.3em;
+}
+
+.radio {
+	width: 0.60em; height: 0.60em;
+	border-radius: 50%;
+	border: 1px solid #7c7c7c;
+	position: absolute;
+	left: -0.3em; top: 0.04em;
+	background-color: #484848;
+	transition: 0.2s;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+	height: 70%; width: 90%;
+	margin: auto;
+
+}
+
+div {
+	text-align: center;
+	width: 8%;
+	font-size: 1.7em;
+	font-family: 'Squada one', cursive;
+	color: #2a2529;
+	transition: 0.1s;
+	cursor: default;
+}
+
+.current-time {
+	color: #4fff00;
+	text-shadow: 0 0 5px #4fff00;
+}
+
+footer {
+	width: 98%;
+	margin-top: 2%;
+}
+	footer a {
+		font-family: 'Orbitron', sans-serif;
+		font-size: 0.7em;
+		color: #2a2529;
+		width: 6.6em;
+		float: right;
+		cursor: pointer;
+		text-decoration: none;
+		transition: 0.1s;
+	}
+		footer a:hover {	
+			color: #f7f9f5;
+			text-shadow: 0 0 6px #ffffff,0 0 2px #008000,0 0 1px #0000ff;
+			animation: flick2 linear 3s;
+		}
+
+	@keyframes flick2 {
+		0%,12%,18.999%,23%,28.999%,34% {
+		opacity:0.99; text-shadow: 0 0 6px #ffffff,0 0 2px #008000,0 0 1px #0000ff;
+	  }
+	  19%,22.99%,29%,33.999% { 
+		opacity:0.4; text-shadow: none;
+	  }
+
+	}

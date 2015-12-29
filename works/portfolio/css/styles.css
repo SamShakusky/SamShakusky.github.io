@@ -18,10 +18,25 @@ body {
     background: #0c1012;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
+    position: relative;
 }
     body.done {
         overflow-x: hidden;
         overflow-y: auto;
+    }
+
+.loading {
+	height: 100%; width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    background: #0c1012;
+    z-index: 999999;
+    opacity: 1;
+    transition: all 0.2s;
+}
+    .loading.done {
+        opacity: 0;
+        display: none;
     }
 
 							     /*SIDE_BAR*/
@@ -214,26 +229,11 @@ aside a {
 
 
 main {
-    height: 250%; width: calc(100% - 53px);
+    height: 250%; 
     margin-left: 52px;
     margin-top: 2px;
     padding-bottom: 50px;
-    position: relative;
 }
-
-.loading {
-	height: 100%; width: 100%;
-    position: absolute;
-    top: 0; left: 0;
-    background: #0c1012;
-    z-index: 300;
-    opacity: 1;
-    transition: all 0.2s;
-}
-    .loading.done {
-        opacity: 0;
-        display: none;
-    }
 
 .grid {
     height: 100%; max-width: 100%;

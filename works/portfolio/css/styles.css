@@ -1,0 +1,315 @@
+@charset "utf-8";
+							     /*CSS RESET*/
+html { 
+	box-sizing: border-box;
+	height: 100%;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body, figure {
+	margin: 0;
+}
+
+
+							     /*MISC*/
+body {
+    height: 100%; width: 100%;
+    background: #0c1012;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+    body.done {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+.loading {
+	height: 100%; width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    background: #0c1012;
+    z-index: 999999;
+    opacity: 1;
+    transition: all 0.2s;
+}
+    .loading.done {
+        opacity: 0;
+        display: none;
+    }
+
+							     /*SIDE_BAR*/
+aside {
+    height: 100%; width: 50px;
+    background: #07090a;
+    transition: all 0.5s;
+    overflow: hidden;
+    float: left;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+    aside.active {
+        width: 320px;    
+    }
+
+.menu-btn {
+    height: 50px; width: 50px;
+    background: #2b2ea7;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+    .menu-btn.active {
+        background: none;
+    }
+
+.stroke {
+    position: absolute;
+    height: 2px; width: 32px;
+    background: white;
+    left: 9px;
+    transition: all 0.4s;
+}
+    .stroke.active {
+            left: 5px;
+        }
+
+    .stroke1 {
+        top: 16px;
+        transform-origin: 86% 0;
+    }
+        .stroke1.active {
+            transform: rotate(-45deg);    
+        }
+
+    .stroke2 {
+        top: 24px;
+        transition: all 0.5s;
+    }
+        .stroke2.active {
+            width: 0;
+            transition: all 0s;
+        }
+
+    .stroke3 {
+        transform-origin: 86% 100%;
+        top: 32px;
+    }
+        .stroke3.active {
+            transform: rotate(45deg);    
+        }
+
+aside a {
+    display: block;
+    height: 40px;
+    border-top: 1px solid #181818;
+    background: #07090a;
+    position: relative;
+    top: 25%;
+    transition: all 0.6s;
+}
+    aside a:hover {
+        background: #2b2ea7;
+    }
+    
+    aside a:nth-child(5) {
+        border-bottom: 1px solid #181818;   
+    }
+
+    aside a.active {
+        padding-left: 34px;
+        transition: all 0.6s;
+        top: 28%;
+    }
+        aside a.active:hover {
+            padding-left: 39px;
+            
+        }
+
+    aside p {
+        width: 80px;
+        position: absolute;
+        top: -6px; left: 49px;
+        color: #848484;
+        transition: all 0.6s;
+    }
+        aside p.active {
+            display: block;
+            left: 83px
+        }
+    
+        aside p.hover {
+            color: white;
+            left: 88px;
+        }
+
+.icons {
+    height: 50px; width: 50px;
+    background: url(../img/icons.png) no-repeat;
+    background-size: 28px;
+    background-position: 11px 9px;
+    
+}
+    .icons.hover {
+        background: url(../img/iconsActive.png) no-repeat;
+        background-size: 28px;
+        background-position: 11px 9px;
+    }
+    
+    .icons.active {
+        width: 100%;
+    }
+
+.about {
+    background-position: 11px -34px;
+}
+    .about.hover {
+        background-position: 11px -34px;   
+    }
+
+.contacts {
+    background-position: 11px -76px;
+}
+    .contacts.hover {
+        background-position: 11px -76px;   
+    }
+
+
+.personal-info {
+    width: 0; height: 20px;
+    transition: all 0.8s;
+}
+    .personal-info.active {
+        width: 100%; height: 120px;
+    }
+
+    .personal-info img {
+        opacity: 0;
+        height: 130px; width: 130px;
+        position: relative;
+        top: 80px; left: 0px;
+        border-radius: 50%;
+        transition: all 0.5s, opacity 0.2s;
+    }
+        .personal-info img.active {
+            opacity: 1;
+            left: 95px;
+        }
+    
+    .personal-info h3 {
+        opacity: 0;
+        color: white;
+        width: 150px;
+        position: relative;
+        top: 80px; left: 0px;
+        transition: all 0.5s, opacity 0.2s;
+    }
+        .personal-info h3.active {
+            opacity: 1;
+            left: 95px;    
+        }
+
+    .personal-info h4 {
+        opacity: 0;
+        font-size: 0.8em;
+        font-weight: 300;
+        color: #909090;
+        width: 320px;
+        position: relative;
+        top: 70px; left: -60px;
+        transition: all 0.5s, opacity 0.2s;
+        text-align: center;
+    }
+        .personal-info h4.active {
+            opacity: 1;
+            left: 0px;
+        }
+
+
+main {
+    height: 250%; 
+    margin-left: 52px;
+    margin-top: 2px;
+    padding-bottom: 50px;
+}
+
+.grid {
+    height: 100%; max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: stretch;
+    transition: all 0.5s;
+    position: relative;
+    left: 0;
+    border: 1px solid #0c1012;
+}
+    .grid.active {
+	   left: 270px;
+    }
+
+.container {
+    height: 15%; width: 25%;
+    border: 3px solid #0c1012;
+    transition: all linear 0.4s;
+    overflow: hidden;
+    position: relative;
+    background: white;
+}
+
+.photo {
+    position: absolute;
+    left: -7%;
+    max-height: 110%;
+    transition: all linear 5.4s;
+    
+}
+    .photo:hover {
+	   transform: scale(1.2);
+    }
+
+footer {
+    background: #0c1012;
+    height: 50px; width: 100%;
+    padding-right: 10px;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+    footer button {
+        margin: 5px;
+        padding: 5px 14px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 0.9em;
+        letter-spacing: 2px;
+        border: 1px solid #848484;
+        background: none;
+        color: #909090;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+        footer button:hover {
+            background: #2b2ea7;
+            border-color: #2b2ea7;
+            color: white;
+        }
+
+        footer button#activeButton {
+            background: #2b2ea7;
+            border-color: #2b2ea7;
+            color: white;
+        }
+
+
+
+
+
+

@@ -37,14 +37,14 @@ body {
     background: #0c1012;
     z-index: 999999;
     opacity: 1;
-    transition: all 0.2s;
+    transition: all 0.9s;
     display: flex;
     justify-content: center;
     align-items: center;
 }
     .loading.done {
         opacity: 0;
-        display: none;
+        height: 0;
     }
     
     .loading img {

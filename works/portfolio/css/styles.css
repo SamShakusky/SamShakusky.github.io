@@ -18,11 +18,16 @@ body {
     background: #0c1012;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
-    position: relative;
+    position: absolute;
+    top: 0;
 }
     body.done {
         overflow-x: hidden;
         overflow-y: auto;
+    }
+
+    body.gallery-mod {
+        overflow: hidden;
     }
 
 .loading {
@@ -33,25 +38,41 @@ body {
     z-index: 999999;
     opacity: 1;
     transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
     .loading.done {
         opacity: 0;
         display: none;
     }
+    
+    .loading img {
+        animation: rotation 0.5s infinite;
+    }
+        @keyframes rotation {
+            100% {
+                transform: rotate(180deg);
+            }
+        }
 
 							     /*SIDE_BAR*/
 aside {
     height: 100%; width: 50px;
     background: #07090a;
-    transition: all 0.5s;
     overflow: hidden;
     float: left;
     position: fixed;
     top: 0;
     z-index: 2;
+    transition: all 0.5s;
 }
     aside.active {
         width: 320px;    
+    }
+
+    aside.gallery-mod {
+	   left: -100%;
     }
 
 .menu-btn {
@@ -60,9 +81,11 @@ aside {
     position: relative;
     float: right;
     cursor: pointer;
+    transition: all 0.5s;
 }
     .menu-btn.active {
         background: none;
+        transition: all 0.5s;
     }
 
 .stroke {
@@ -231,7 +254,7 @@ aside a {
 main {
     height: 250%; 
     margin-left: 52px;
-    margin-top: 2px;
+    border-top: 2px solid #0c1012;
     padding-bottom: 50px;
 }
 
@@ -251,6 +274,10 @@ main {
     .grid.active {
 	   left: 270px;
     }
+    
+    .grid.gallery-mod {
+	   left: -100%;
+    }
 
 .container {
     height: 15%; width: 25%;
@@ -266,7 +293,7 @@ main {
     left: -7%;
     max-height: 110%;
     transition: all linear 5.4s;
-    
+    cursor: pointer;
 }
     .photo:hover {
 	   transform: scale(1.2);
@@ -282,7 +309,12 @@ footer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    transition: left 0.4s;
 }
+    footer.gallery-mod {
+	   left: -100%;
+    }
+
     footer button {
         margin: 5px;
         padding: 5px 14px;
@@ -308,8 +340,29 @@ footer {
             color: white;
         }
 
-
-
-
-
-
+.gallery {
+	height: 100%; width: 100%;
+    position: fixed;
+    top: 0; left: 100%;
+    z-index: 4;
+    background: #07090a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+}
+    .gallery img {
+        height: 80%; width: auto;
+        
+    }
+    
+    .gallery .menu-btn {
+        position: absolute;
+        left: auto; right: 0;
+        float: none;
+        opacity: 0.8;
+        transition: all 0.2s;
+    }
+        .gallery .menu-btn:hover {
+            opacity: 1;
+        }

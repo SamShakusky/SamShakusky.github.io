@@ -5,14 +5,14 @@ var isImgLoaded = function () {
         .done( function () {
         $('.loading').addClass('done');
         $('body').addClass('done');
-  })
+  });
 };
 
 var clickMenu = function () {
     "use strict";
     
-    $('.menu-btn').click(function () {
-        $('.stroke, .menu-btn, aside, aside a, icons, aside p, .personal-info, .personal-info img, .personal-info h3, .personal-info h4, .grid').toggleClass('active');
+    $('aside .menu-btn').click(function () {
+        $('aside, aside .stroke, aside .menu-btn, aside a, aside p, icons, .personal-info, .personal-info img, .personal-info h3, .personal-info h4, .grid').toggleClass('active');
         
     });
 };
@@ -29,7 +29,7 @@ var hoverEffects = function () {
     });
 };
 
-var tagsFilter = function () {
+var filterTags = function () {
     "use strict";
     
     var revealAllContainers = function () {
@@ -51,10 +51,10 @@ var tagsFilter = function () {
         $(this).attr('id', 'activeButton');
         
         if ($(this).hasClass('all')) {
-            revealAllContainers ();
+            revealAllContainers();
         } else {
             
-            revealAllContainers ();
+            revealAllContainers();
             
             $('.container').each(function () {
                 
@@ -66,7 +66,7 @@ var tagsFilter = function () {
                 if ($(this).attr('class') !== theClass) {
                     $(this).css('display', 'none');
                     $('.grid').css({'flex-direction': 'row', 'flex-wrap': 'nowrap'});
-                    javascript:window.scrollTo(0,0);
+                    javascript:window.scrollTo(0, 0);
                 }
                 
                 $(this).addClass('container');
@@ -76,7 +76,34 @@ var tagsFilter = function () {
     });
 };
 
+var toggleGallery = function () {
+    "use strict";
+    
+    $('.photo, .all').click(function () {
+        
+        var photoDirectory = $(this).attr('src');
+        
+        $('.gallery img').attr('src', photoDirectory);
+        $('.gallery').css('left', '0');
+        $('aside, .grid, footer').addClass('gallery-mod');
+        
+        $('body').addClass('gallery-mod');
+    });
+    
+    $('.gallery .menu-btn').click(function () {
+        
+        $('.gallery').css('left', '100%');
+        $('aside, .grid, footer').removeClass('gallery-mod');
+        
+        $('body').removeClass('gallery-mod');
+        
+        setTimeout(function () { $('.gallery img').attr('src', 'img/1.jpg'); }, 300);
+        
+    });
+};
+
 $(document).ready(isImgLoaded);
 $(document).ready(clickMenu);
 $(document).ready(hoverEffects);
-$(document).ready(tagsFilter);
+$(document).ready(filterTags);
+$(document).ready(toggleGallery);

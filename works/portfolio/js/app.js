@@ -1,13 +1,3 @@
-var isImgLoaded = function () {
-    "use strict";
-    
-    $('body').imagesLoaded()
-        .done( function () {
-        $('.loading').addClass('done');
-        $('body').addClass('done');
-  });
-};
-
 var clickMenu = function () {
     "use strict";
     
@@ -29,12 +19,78 @@ var hoverEffects = function () {
     });
 };
 
-var filterTags = function () {
+var toggleGallery = function () {
+    "use strict";
+    
+    $('.photo, .all').click(function () {
+        
+        var photoDirectory = $(this).attr('src');
+        
+        $('.showcase').attr('src', photoDirectory);
+        $('.gallery').css('left', '0');
+        $('aside, .grid, footer').addClass('gallery-mod');
+        
+        $('body').addClass('gallery-mod');
+    });
+    
+    $('.gallery .menu-btn').click(function () {
+        
+        $('.gallery').css('left', '100%');
+        $('aside, .grid, footer').removeClass('gallery-mod');
+        
+        $('body').removeClass('gallery-mod');
+        
+        setTimeout(function () { $('.showcase').attr('src', 'img/1.jpg'); }, 300);
+        
+    });
+};
+
+var swapPhotos = function () {
+    "use strict";
+    
+    $('.photo').click(function () {
+        window.photoId = $(this).attr('id');
+        
+        $('.arrow').click(function () {
+
+            if ($(this).hasClass('left')) {
+                if (photoId > 1) {
+                    var prevPhotoId = '#' + (photoId - 1);
+                    var prevPhoto = $(prevPhotoId).attr('src');
+
+                    $('.showcase').attr('src', prevPhoto);
+                    photoId = prevPhotoId.substring(1);
+                } else {
+                    $('.showcase').attr('src', 'img/22.jpg');
+                    photoId = 22;
+                }
+            } else {
+                if (photoId < 22) {     
+                    var photoIdToInt = parseInt(photoId);
+
+                    var nextPhotoId = '#' + (photoIdToInt + 1);
+                    var nextPhoto = $(nextPhotoId).attr('src');
+
+                    $('.showcase').attr('src', nextPhoto);
+                    photoId = nextPhotoId.substring(1);
+                } else {
+                    $('.showcase').attr('src', 'img/1.jpg');
+                    photoId = 1;
+                }
+            }
+            
+            
+        });
+    });
+};
+
+/*var filterTags = function () {
     "use strict";
     
     var revealAllContainers = function () {
         $('.container').each(function () {
             $(this).css('display', 'block');
+            $(this).children().removeClass('hidden');
             $('.grid').css({'flex-direction': 'column', 'flex-wrap': 'wrap'});
         });
     };
@@ -52,6 +108,7 @@ var filterTags = function () {
         
         if ($(this).hasClass('all')) {
             revealAllContainers();
+            photoId = 1;
         } else {
             
             revealAllContainers();
@@ -65,6 +122,7 @@ var filterTags = function () {
 
                 if ($(this).attr('class') !== theClass) {
                     $(this).css('display', 'none');
+                    
                     $('.grid').css({'flex-direction': 'row', 'flex-wrap': 'nowrap'});
                     javascript:window.scrollTo(0, 0);
                 }
@@ -74,36 +132,14 @@ var filterTags = function () {
             });
         }
     });
-};
+};*/    // unfinished
 
-var toggleGallery = function () {
-    "use strict";
-    
-    $('.photo, .all').click(function () {
-        
-        var photoDirectory = $(this).attr('src');
-        
-        $('.gallery img').attr('src', photoDirectory);
-        $('.gallery').css('left', '0');
-        $('aside, .grid, footer').addClass('gallery-mod');
-        
-        $('body').addClass('gallery-mod');
-    });
-    
-    $('.gallery .menu-btn').click(function () {
-        
-        $('.gallery').css('left', '100%');
-        $('aside, .grid, footer').removeClass('gallery-mod');
-        
-        $('body').removeClass('gallery-mod');
-        
-        setTimeout(function () { $('.gallery img').attr('src', 'img/1.jpg'); }, 300);
-        
-    });
-};
 
-$(document).ready(isImgLoaded);
+
+
+
 $(document).ready(clickMenu);
 $(document).ready(hoverEffects);
-$(document).ready(filterTags);
 $(document).ready(toggleGallery);
+$(document).ready(swapPhotos);
+/*$(document).ready(filterTags);*/

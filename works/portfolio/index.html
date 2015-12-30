@@ -8,7 +8,8 @@
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 		
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-		<script src="js/app.js"></script>
+		<script src="js/isImgLoaded.js"></script>
+        <script src="js/app.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.0.0/imagesloaded.pkgd.min.js"></script>
 		
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -33,15 +34,15 @@
                 <h4>Корпоративы, свадьбы, ультранасилие</h4>
             </div>
             
-            <a href="#" title="Портфолио">
+            <a href="index.html" title="Портфолио">
                 <div class="icons portfolio"></div>
                 <p>Портфолио</p>
             </a>
-            <a href="#" title="Обо мне">
+            <a href="about.html" title="Обо мне">
                 <div class="icons about"></div>
                 <p>Обо мне</p>
             </a>
-            <a href="#" title="Контакты">
+            <a href="contacts.html" title="Контакты">
                 <div class="icons contacts"></div>
                 <p>Контакты</p>
             </a>
@@ -49,81 +50,82 @@
         
         <main>
             <div class="grid">
-                <div class="container other" style="flex-grow:">
-                    <img class="photo" src="img/1.jpg" alt="photo">
+                <div class="container" style="flex-grow:">
+                    <img id="1" class="photo" src="img/1.jpg" alt="photo">
                 </div>
-                <div class="container gloomy" style="flex-grow:">
-                    <img class="photo" src="img/2.jpg" alt="photo">
+                <div class="container" style="flex-grow:">
+                    <img id="5" class="photo" src="img/2.jpg" alt="photo">
                 </div>
-                <div class="container gloomy" style="flex-grow:5; height: 20%">
-                    <img class="photo" src="img/3.jpg" alt="photo">
+                <div class="container" style="flex-grow:5; height: 20%">
+                    <img id="9" class="photo" src="img/3.jpg" alt="photo">
                 </div>
-                <div class="container water" style="flex-grow:2">
-                    <img class="photo" src="img/4.jpg" alt="photo">
+                <div class="container" style="flex-grow:2">
+                    <img id="15" class="photo" src="img/4.jpg" alt="photo">
                 </div>
-                <div class="container water" style="flex-grow:4">
-                    <img class="photo" src="img/5.jpg" alt="photo">
+                <div class="container" style="flex-grow:4">
+                    <img id="19" class="photo" src="img/5.jpg" alt="photo">
                 </div>
-                <div class="container water" style="flex-grow:5; height: 25%">
-                    <img class="photo" src="img/6.jpg" alt="photo">
+                <div class="container" style="flex-grow:5; height: 25%">
+                    <img id="2" class="photo" src="img/6.jpg" alt="photo">
                 </div>
-                <div class="container other" style="flex-grow:">
-                    <img class="photo" src="img/7.jpg" alt="photo">
+                <div class="container" style="flex-grow:">
+                    <img id="6" class="photo" src="img/7.jpg" alt="photo">
                 </div>
                 <div class="container" style="flex-grow:15">
-                    <img class="photo" src="img/8.jpg" alt="photo">
+                    <img id="10" class="photo" src="img/8.jpg" alt="photo">
                 </div>
-                <div class="container water" style="flex-grow:5; height: 20%">
-                    <img class="photo" src="img/9.jpg" alt="photo">
+                <div class="container" style="flex-grow:5; height: 20%">
+                    <img id="16" class="photo" src="img/9.jpg" alt="photo">
                 </div>
-                <div class="container gloomy" style="flex-grow:5">
-                    <img class="photo" src="img/10.jpg" alt="photo">
+                <div class="container" style="flex-grow:5">
+                    <img id="20" class="photo" src="img/10.jpg" alt="photo">
                 </div>
-                <div class="container other" style="flex-grow:10">
-                    <img class="photo" src="img/11.jpg" alt="photo">
+                <div class="container" style="flex-grow:10">
+                    <img id="3" class="photo" src="img/11.jpg" alt="photo">
                 </div>
-                <div class="container water" style="flex-grow:0">
-                    <img class="photo" src="img/12.jpg" alt="photo">
+                <div class="container" style="flex-grow:0">
+                    <img id="7" class="photo" src="img/12.jpg" alt="photo">
                 </div>
-                <div class="container water" style="flex-grow:20">
-                    <img class="photo" src="img/13.jpg" alt="photo">
+                <div class="container" style="flex-grow:20">
+                    <img id="11" class="photo" src="img/13.jpg" alt="photo">
                 </div>
-                <div class="container other" style="flex-grow:0">
-                    <img class="photo" src="img/14.jpg" alt="photo">
+                <div class="container" style="flex-grow:0">
+                    <img id="13" class="photo" src="img/14.jpg" alt="photo">
                 </div>
-                <div class="container gloomy" style="flex-grow:0">
-                    <img class="photo" src="img/15.jpg" alt="photo">
+                <div class="container" style="flex-grow:0">
+                    <img id="17" class="photo" src="img/15.jpg" alt="photo">
                 </div>
-                <div class="container water" style="flex-grow:20">
-                    <img class="photo" src="img/16.jpg" alt="photo">
+                <div class="container" style="flex-grow:20">
+                    <img id="21" class="photo" src="img/16.jpg" alt="photo">
                 </div>
-                <div class="container gloomy" style="flex-grow:5">
-                    <img class="photo" src="img/17.jpg" alt="photo">
+                <div class="container" style="flex-grow:5">
+                    <img id="4" class="photo" src="img/17.jpg" alt="photo">
                 </div>
-                <div class="container gloomy" style="flex-grow:5">
-                    <img class="photo" src="img/18.jpg" alt="photo">
+                <div class="container" style="flex-grow:5">
+                    <img id="8" class="photo" src="img/18.jpg" alt="photo">
                 </div>
-                <div class="container other" style="flex-grow:100; height: 20%">
-                    <img class="photo" src="img/19.jpg" alt="photo">
+                <div class="container" style="flex-grow:100; height: 20%">
+                    <img id="12" class="photo" src="img/19.jpg" alt="photo">
                 </div>
-                <div class="container other" style="flex-grow:5">
-                    <img class="photo" src="img/20.jpg" alt="photo">
+                <div class="container" style="flex-grow:5">
+                    <img id="14" class="photo" src="img/20.jpg" alt="photo">
                 </div>
-                <div class="container other" style="flex-grow:12">
-                    <img class="photo" src="img/21.jpg" alt="photo">
+                <div class="container" style="flex-grow:12">
+                    <img id="18" class="photo" src="img/21.jpg" alt="photo">
                 </div>
-                <div class="container other" style="flex-grow:5">
-                    <img class="photo" src="img/22.jpg" alt="photo">
+                <div class="container" style="flex-grow:5">
+                    <img id="22" class="photo" src="img/22.jpg" alt="photo">
                 </div>
             </div><!--grid-->
         </main>
         
-        <footer>
+        <!--Unfinished-->
+        <!--<footer>
             <button id="activeButton" class="all">Все</button>
-            <button class="gloomy">Мрачные</button>
-            <button class="water">Вода</button>
-            <button class="other">Прочие</button>
-        </footer>
+            <button class="group1">Группа 1</button>
+            <button class="group2">Группа 2</button>
+            <button class="group3">Группа 3</button>
+        </footer>-->
         
         <div class="gallery">
             <div class="menu-btn">
@@ -131,7 +133,9 @@
                 <div class="stroke stroke3 active"></div>
             </div><!--menu-btn-->
             
+            <img class="arrow left" src="img/arrow-left.png" alt="arrow-left">
             <img class="showcase" src="img/1.jpg" alt="showcase">
+            <img class="arrow right" src="img/arrow-right.png" alt="arrow-right">
         </div>
     </body>
 </html>

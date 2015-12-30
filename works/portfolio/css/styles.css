@@ -55,6 +55,9 @@ body {
                 transform: rotate(180deg);
             }
         }
+        .loading img.done {
+            display: none;
+        }
 
 							     /*SIDE_BAR*/
 aside {
@@ -250,12 +253,13 @@ aside a {
             left: 0px;
         }
 
+							     /*MAIN*/
 
 main {
     height: 250%; 
     margin-left: 52px;
     border-top: 2px solid #0c1012;
-    padding-bottom: 50px;
+    padding-bottom: 0;
 }
 
 .grid {
@@ -292,6 +296,7 @@ main {
     position: absolute;
     left: -7%;
     max-height: 110%;
+    min-height: 100%; min-width: 100%;
     transition: all linear 5.4s;
     cursor: pointer;
 }
@@ -299,12 +304,13 @@ main {
 	   transform: scale(1.2);
     }
 
-footer {
+            /*Unfinished*/
+/*footer {
     background: #0c1012;
     height: 50px; width: 100%;
     padding-right: 10px;
     position: fixed;
-    z-index: 1;
+    z-index: -1;
     bottom: 0;
     display: flex;
     justify-content: flex-end;
@@ -338,7 +344,9 @@ footer {
             background: #2b2ea7;
             border-color: #2b2ea7;
             color: white;
-        }
+        }*/
+
+							     /*GALLERY*/
 
 .gallery {
 	height: 100%; width: 100%;
@@ -350,19 +358,85 @@ footer {
     justify-content: center;
     align-items: center;
     transition: all 0.4s;
-}
-    .gallery img {
-        height: 80%; width: auto;
-        
-    }
-    
+}   
     .gallery .menu-btn {
         position: absolute;
-        left: auto; right: 0;
+        left: auto; right: 0; top:0;
         float: none;
-        opacity: 0.8;
+        opacity: 0.6;
         transition: all 0.2s;
     }
         .gallery .menu-btn:hover {
             opacity: 1;
         }
+
+.showcase {
+    height: 80%; width: auto;        
+}
+
+.arrow {
+    height: 6%;
+	opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: absolute;
+    top: 47%;
+}
+    .arrow:hover {
+        opacity: 1;
+    }
+    
+    .arrow:nth-child(2) {
+        left: 3%;
+    }
+
+    .arrow:nth-child(4) {
+        right: 3%;
+    }
+
+
+							     /*ABOUT*/
+
+.top-part {
+    height: auto; width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: antiquewhite;
+    margin-top: 7%;
+    
+    
+}
+    .top-part img {
+        height: 20%; width: 20%;
+        
+        border-radius: 100%;
+    }
+
+    .top-part h1 {
+       font-weight: 300; 
+    }
+
+    .top-part h2 {
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 1em;
+        letter-spacing: 0.1em;
+        margin-top: -1%;
+    }
+
+    .top-part p {
+        max-width: 1000px;
+        text-indent: 1%;
+        text-align: left;
+        font-size: 1.1em;
+        line-height: 1.5em;
+    }
+        .top-part p:nth-child(5) {
+            padding-bottom: 5%;
+        }
+
+
+
+
+

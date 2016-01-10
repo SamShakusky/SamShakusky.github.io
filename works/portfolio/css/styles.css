@@ -136,6 +136,7 @@ aside a {
     position: relative;
     top: 25%;
     transition: all 0.6s;
+    cursor: pointer;
 }
     aside a:hover {
         background: #2427a7;

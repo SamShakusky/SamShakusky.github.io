@@ -1,7 +1,7 @@
 var isImgLoaded = function () {
     "use strict";
     
-    $('body').imagesLoaded()
+    $('.grid').imagesLoaded()
         .done(function () {
         $('.loading, .loading img, body').addClass('done');
   });

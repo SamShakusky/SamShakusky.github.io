@@ -71,7 +71,8 @@ aside {
     transition: all 0.5s;
 }
     aside.active {
-        width: 320px;    
+        width: 320px;
+        overflow: auto;
     }
 
     aside.gallery-mod {
@@ -80,7 +81,7 @@ aside {
 
 .menu-btn {
     height: 50px; width: 50px;
-    background: #2b2ea7;
+    background: #2427a7;
     position: relative;
     float: right;
     cursor: pointer;
@@ -129,7 +130,7 @@ aside {
 
 aside a {
     display: block;
-    height: 40px;
+    height: 40px; width: 320px;
     border-top: 1px solid #181818;
     background: #07090a;
     position: relative;
@@ -137,7 +138,7 @@ aside a {
     transition: all 0.6s;
 }
     aside a:hover {
-        background: #2b2ea7;
+        background: #2427a7;
     }
     
     aside a:nth-child(5) {
@@ -155,15 +156,15 @@ aside a {
         }
 
     aside p {
-        width: 80px;
+        width: auto;
         position: absolute;
-        top: -6px; left: 49px;
+        top: -6px; left: 50px;
         color: #848484;
         transition: all 0.6s;
     }
         aside p.active {
             display: block;
-            left: 83px
+            left: 83px;
         }
     
         aside p.hover {
@@ -253,6 +254,151 @@ aside a {
             left: 0px;
         }
 
+.social-networks {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #181818;
+    background: #07090a;
+    position: relative;
+    top: 24.9%;
+    transition: all 0.6s;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    margin-top: -39px;
+}
+
+.social-networks.unfolded {
+    border-top: 1px solid #181818;
+    height: auto;
+    visibility: visible;
+}
+
+.social-networks.active {
+	top: 27.8%;
+}
+
+.social-networks a {
+	border: 0;
+    padding-top: -5px;
+    top: 0;
+    cursor: pointer;
+}
+    .social-networks a:nth-child(5) {
+        border: 0px;
+    }
+
+    .social-networks a.active {
+        top: 0;
+    }
+
+.social-networks .icons {
+	background: url(../img/contacts-unactive.png) no-repeat;
+    background-position: 13px 8px;
+}
+    .social-networks div.hover {
+        background: url(../img/contacts.png) no-repeat;
+        background-position: 13px 8px;
+    }
+    
+    .social-networks .facebook {
+        background-position: -49px 8px;
+    }
+        .social-networks .facebook.hover {
+            background-position: -49px 8px;
+        }
+
+    .social-networks .vk {
+            background-position: -113px 8px;
+        }
+            .social-networks .vk.hover {
+                background-position: -113px 8px;
+            }
+
+    .social-networks .telephone {
+            background-position: -50px -56px;
+        }
+            .social-networks .telephone.hover {
+                background-position: -50px -56px;
+            }
+
+    .social-networks .insta {
+            background-position: -113px -56px;
+        }
+            .social-networks .insta.hover {
+                background-position: -113px -56px;
+            }
+
+.side-float {
+	height: 42px; width: 200px;
+    background: #07090a;
+    border: 1px solid #181818;
+    position: absolute;
+    left: -200px;
+    opacity: 1;
+    transition: left 0.3s, top 0s, background 0.6s;
+    z-index: 2;
+}
+    .side-float.hover {
+        opacity: 1;
+        left: 49px;
+        background: #2427a7;
+    }
+
+    .side-float.active.hover {
+        opacity: 1;
+        left: 319px;
+    }
+
+    .side-float h1 {
+        color: white;
+        font-size: 0.9em;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 2px;
+        display: none;
+    }
+        .side-float h1.active {
+            display: block;
+        }
+
+.close-social {
+	height: 11px;
+    position: relative;
+    background: #2427a7;
+    opacity: 0.3;
+    cursor: pointer;
+}
+    .close-social:hover {
+        opacity: 1;
+    }
+
+.cross {
+	height: 1px; width: 10px;
+    position: absolute;
+    top: 3px; left: 50%;
+    background: white;
+    transform: rotate(35deg);
+    transform-origin: 0 0;
+    transition: all 0.3s;
+}
+
+.cross.hoverSocial {
+	transform: rotate(25deg);
+}
+
+.second-stroke {
+	transform-origin: 100% 0;
+    transform: rotate(-35deg);
+    left: calc(50% - 10px);
+}
+    .second-stroke.hoverSocial {
+        transform: rotate(-25deg);
+    }
+
+
+
+
 							     /*MAIN*/
 
 main {
@@ -260,7 +406,13 @@ main {
     margin-left: 52px;
     border-top: 2px solid #0c1012;
     padding-bottom: 0;
+    transition: all 0.5s;
+    position: relative;
+    left: 0;
 }
+    main.active {
+	   left: 270px;
+    }
 
 .grid {
     height: 100%; max-width: 100%;
@@ -274,11 +426,7 @@ main {
     position: relative;
     left: 0;
     border: 1px solid #0c1012;
-}
-    .grid.active {
-	   left: 270px;
-    }
-    
+} 
     .grid.gallery-mod {
 	   left: -100%;
     }
@@ -335,14 +483,14 @@ main {
         transition: all 0.3s;
     }
         footer button:hover {
-            background: #2b2ea7;
-            border-color: #2b2ea7;
+            background: #2427a7;
+            border-color: #2427a7;
             color: white;
         }
 
         footer button#activeButton {
-            background: #2b2ea7;
-            border-color: #2b2ea7;
+            background: #2427a7;
+            border-color: #2427a7;
             color: white;
         }*/
 
@@ -358,7 +506,15 @@ main {
     justify-content: center;
     align-items: center;
     transition: all 0.4s;
-}   
+    opacity: 0;
+    visibility: hidden;
+}
+    .gallery.active {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
     .gallery .menu-btn {
         position: absolute;
         left: auto; right: 0; top:0;
@@ -436,7 +592,62 @@ main {
             padding-bottom: 5%;
         }
 
+							     /*CONTACTS*/
 
+.contacts-heading {
+    height: 90%; width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: antiquewhite;
+    padding-top: 3%;
+}
+    .contacts-heading h1 {
+        font-weight: 300;
+    }
 
+    .contacts-heading h2 {
+        border-bottom: 1px solid white;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 1em;
+        letter-spacing: 0.1em;
+        margin-top: -1%;
+        padding: 1% 3%;
+    }
 
+.contacts-tiles {
+	margin: auto;
+    height: 90%; width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
 
+.tile {
+    height: 38%; width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+}
+    .tile h4 {
+        font-size: 180%;
+        padding: 0; margin: 0;
+        font-weight: 300;
+        background: url(../img/contacts.png);
+        background-size: 110%;
+    }
+
+    .tile a {
+        color: #2427a7;
+        font-size: 190%;
+        padding: 0; margin: 0;
+    }
+
+.social {
+	height: 10%; width: 10%;
+    border: 1px solid white;
+}

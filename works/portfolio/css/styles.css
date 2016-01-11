@@ -453,47 +453,6 @@ main {
 	   transform: scale(1.2);
     }
 
-            /*Unfinished*/
-/*footer {
-    background: #0c1012;
-    height: 50px; width: 100%;
-    padding-right: 10px;
-    position: fixed;
-    z-index: -1;
-    bottom: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    transition: left 0.4s;
-}
-    footer.gallery-mod {
-	   left: -100%;
-    }
-
-    footer button {
-        margin: 5px;
-        padding: 5px 14px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-        font-size: 0.9em;
-        letter-spacing: 2px;
-        border: 1px solid #848484;
-        background: none;
-        color: #909090;
-        cursor: pointer;
-        transition: all 0.3s;
-    }
-        footer button:hover {
-            background: #2427a7;
-            border-color: #2427a7;
-            color: white;
-        }
-
-        footer button#activeButton {
-            background: #2427a7;
-            border-color: #2427a7;
-            color: white;
-        }*/
 
 							     /*GALLERY*/
 

@@ -485,7 +485,7 @@ footer {
     }
 
     header {
-         
+        position: relative;
     }
     
     main {
@@ -497,6 +497,7 @@ footer {
     aside {
         float: none;
         width: 100%; height: auto;
+        min-height: 47.75vw;
         padding-right: 0;
     }
     

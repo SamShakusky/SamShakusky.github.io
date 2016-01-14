@@ -33,7 +33,7 @@ var form3dEffects = function () {
                 .css('transform', 'rotateX('+rotateX+'deg) rotateY('+rotateY+'deg)');
         });
     
-    $('.3d').click(function () {
+    $('form a').click(function () {
         if (moveForce === 50) {
             $('.moving-zone').css('perspective', 'none');
             $('form a, .close').removeClass('on');

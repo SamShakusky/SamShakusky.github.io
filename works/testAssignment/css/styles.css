@@ -198,10 +198,6 @@ header {
         visibility: hidden;
     }
 
-    .logo img {
-        height: 100px; width: 100px;
-    }
-
 nav {
     height: 36px; width: auto;
     float: right;

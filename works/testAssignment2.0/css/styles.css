@@ -497,7 +497,6 @@ footer {
     aside {
         float: none;
         width: 100%; height: auto;
-        min-height: 47.75vw;
         padding-right: 0;
     }
     
@@ -507,7 +506,7 @@ footer {
     }
     
     .wrap {
-        max-height: 47.75vw;
+        max-height: 60.75vw;
         width: 100%;
     }
         .wrap div {

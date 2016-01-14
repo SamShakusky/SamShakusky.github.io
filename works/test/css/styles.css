@@ -560,7 +560,7 @@ footer {
 
 /*479px*/
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
     .moving-zone {
 	    width: 300px;
     }

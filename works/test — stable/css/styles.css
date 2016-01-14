@@ -1,0 +1,321 @@
+@charset "utf-8";
+							     /*CSS RESET*/
+html { 
+	box-sizing: border-box;
+	height: 100%;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body, figure {
+	margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.clearfix {
+	clear: both;
+    height: 0;
+    overflow: hidden;
+}
+
+
+							     /*POPUP FORM*/
+section {
+    height: 100%; width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 99;
+    background-color: rgba(33,44,50,.90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    section.hidden {
+        display: none;
+    }
+
+.popup {
+	height: 486px; width: 480px;
+    background: #fff;
+    position: relative;
+    z-index: 30;
+}
+
+    .close {
+	    content: "";
+        width: 100%; height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+        z-index: 29;
+    }
+
+form {
+	height: 100%; width: 100%;
+    padding: 39px 49px 50px;
+}
+    form h3 {
+        float: left;
+        font-family: 'PT Sans', sans-serif;
+        color: #1d1d1d;
+        width: calc(100%-12px);
+        margin: 0 0 35px;
+        
+    }
+
+    .close-btn {
+        float: right;
+        height: 17px; width: 17px;
+        border: 0; outline: 0;
+        background: none;
+        position: relative;
+        top: 3px;
+        cursor: pointer;
+    }
+
+        .stroke {
+            height: 16px; width: 2px;
+            background: #afc1d8;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 0; left: 7px;
+            transition: all 0.2s;
+        }
+
+            .stroke_second {
+	            transform: rotate(-45deg);
+            }
+
+
+    form p {
+        clear: both;
+        margin: 22px 0 11px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8em;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #9babbf;
+    }
+
+input {
+    width: 100%;
+    margin: 0;
+    padding: 7px 11px;
+    border: 2px solid #afc1d8;
+    border-radius: 3px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+    color: #9babbf;
+}
+    input:last-child {
+        width: auto;
+        background: #4bae4f;
+        border: 0;
+        border-radius: 3px;
+        padding: 7px 25px;
+        margin-top: 22px;
+        text-transform: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 1em;
+        cursor: pointer;
+        color: #fff;
+    }
+
+textarea {
+    resize: none;
+    height: 82px; width: 100%;
+    margin: 0;
+    padding: 10px 11px;
+    border: 2px solid #afc1d8;
+    border-radius: 3px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+    color: #9babbf;
+}
+
+							     /*HEADER*/
+
+header {
+    height: 82px; width: 100%;
+    border-bottom: 2px solid #f3f7fe;
+    background: #fff;
+    position: fixed;
+}
+
+.logo {
+    margin: 15px 40px;
+    height: 50px; width: 50px;
+    display: block;
+    float: left;
+}
+
+nav {
+    width: auto;
+    float: right;
+    margin: 22px 40px;
+    display: flex;
+    
+}
+
+.link {
+	height: 36px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.04em;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #263238;
+    padding: 7px 23px;
+}
+    
+    .link:hover {
+        color: #4bae4f;
+    }
+
+    .link:focus {
+        outline: 2px solid #afc1d8;
+    }
+
+    .link.form {
+        color: #fff;
+        background: #4bae4f;
+        border-radius: 3px;
+        padding: 8px 16px;
+        text-transform: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 1em;
+        cursor: pointer;
+    }
+
+    .link.form:hover {
+        background: #37803a;
+        color: #fff;
+        
+    }
+
+    .link.active {
+	    color: #4bae4f;
+    }
+
+    .link:nth-child(5) {
+        margin-right: 17px;
+    }
+
+
+							     /*MAIN*/
+
+main {
+    height: auto; width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 9.85% 9.4% 0;
+    display: block;
+}
+
+aside {
+    float: left;
+    height: 100%; width: 43%;
+    padding-right: 2.7%;
+}
+
+.wrap {
+    height: 100%; width: 100%;
+    max-height: 470px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+    .wrap div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .wrap img {
+        max-height: 470px;
+    }
+
+    /*IE hack*/
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+       .wrap img {
+            margin-left: -125px;
+        }
+    }
+
+article {
+    float: right;
+    height: 100%; width: 57%;
+}
+
+    article h1 {
+        margin: -1px 0 0;
+        font-family: 'PT Serif', serif;
+        font-size: 3em;
+        font-weight: 500;
+        line-height: 1.24;
+        color: #263238;
+    }
+
+    article h3 {
+        margin-top: 6%;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.18em;
+        font-weight: 400;
+        line-height: 1.55;
+        color: #acb2bf;
+    }
+
+    article p {
+        margin-top: 3.1%;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.1em;
+        font-weight: 500;
+        line-height: 1.71;
+        color: #263238;
+        letter-spacing: -0.3px;
+    }
+
+    article p:nth-child(4) {
+        position: relative;
+        padding-left: 30px;
+        width: 98.9%;
+        letter-spacing: -0.2px;
+        z-index: -1;
+    }
+        article p:nth-child(4):before {
+            content: '';
+            position: absolute;
+            height: 94%; width: 3px;
+            top: 2%; left: 0;
+            background-color: #acb2b7;
+        }
+
+    article .link.form {
+        display: block;
+        height: 50px; width: 170px;
+        padding: 14px 1px 0 0;
+        font-size: 1.035em;
+        text-align: center;
+        letter-spacing: -0.5px;
+        margin-top: 34px;
+        margin-bottom: 34px;
+    }
+
+							     /*FOOTER*/
+
+footer {
+    width: 100%;
+    height: 100px;
+    background: #acb2b7;
+    margin-top: 100px;
+}
+
+    footer p {
+        color: #fff;
+        padding: 44px 40px 0;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 0.9em;
+    }

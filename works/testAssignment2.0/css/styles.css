@@ -485,7 +485,7 @@ footer {
     }
 
     header {
-        position: relative;
+         
     }
     
     main {
@@ -515,7 +515,7 @@ footer {
     
         .wrap img {
             max-height: 60vw;
-            bottom: 0;
+            bottom: 25px;
             left: 0;
         }
     

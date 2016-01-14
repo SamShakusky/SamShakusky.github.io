@@ -475,7 +475,11 @@ footer {
 
 @media screen and (max-width: 992px) {
     
-	nav {
+	form a {
+	    display: none;
+    }
+    
+    nav {
         height: 0;
         overflow: hidden;
     }

@@ -443,11 +443,11 @@ main {
 
 .photo {
     position: absolute;
-    left: -7%;
     max-height: 110%;
     min-height: 100%; min-width: 100%;
     transition: all linear 5.4s;
     cursor: pointer;
+    object-fit: cover;
 }
     .photo:hover {
 	   transform: scale(1.2);
